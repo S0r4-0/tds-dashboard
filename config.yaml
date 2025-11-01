@@ -1,0 +1,36 @@
+# TDS Monitoring Configuration
+
+# Serial ingestion settings
+serial:
+  enabled: true
+  port: "COM3"  # Windows: COM3, Linux: /dev/ttyUSB0, Mac: /dev/cu.usbserial
+  baudrate: 115200
+  timeout: 1
+
+# HTTP server settings
+http:
+  enabled: true
+  host: "0.0.0.0"
+  port: 5000
+
+# Database settings
+database:
+  path: "data/readings.db"
+
+# Dashboard settings
+dashboard:
+  refresh_interval: 1.5  # seconds
+  default_time_window: 30  # minutes
+  max_readings_display: 1000
+
+# TDS thresholds (ppm)
+thresholds:
+  good: 300      # Below this is "Good"
+  moderate: 600  # Between good and moderate is "Moderate"
+  # Above moderate is "Poor"
+
+# Alerts
+alerts:
+  enabled: true
+  threshold: 600  # Alert when TDS > this value
+  notification_method: "visual"  # visual, desktop, email
