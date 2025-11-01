@@ -3,7 +3,7 @@
 # Serial ingestion settings
 serial:
   enabled: true
-  port: "COM3"  # Windows: COM3, Linux: /dev/ttyUSB0, Mac: /dev/cu.usbserial
+  port: "COM8"  # Windows: COM3, Linux: /dev/ttyUSB0, Mac: /dev/cu.usbserial
   baudrate: 115200
   timeout: 1
 
